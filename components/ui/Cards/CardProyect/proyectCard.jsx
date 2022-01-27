@@ -1,17 +1,34 @@
 import Link from "next/link";
-import { motion } from "framer-motion"
+import { motion, useAnimation } from "framer-motion"
 import Button from "../../buttons/button";
+
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 export default function ProyectCard({children, src, link}) {
 
-    const variants = {
-      visible: { opacity: 1, x: 0, },
-      hidden: { opacity: 0, x: -200, },
-    };
+
+    const animation = useAnimation();
+
+    const {ref, inView} = useInView();
+
+    useEffect(() => {
+
+        console.log('useEffect', inView)
+        if (inView) {
+            animation.start({
+                x: 0, transition: {
+                        type:'spring', duration: 1, bounce: 0.3 }})      
+        }
+        if (!inView) {
+            animation.start({x: "-100vw"});
+        }
+    }, [inView]);
 
 
     return (
-      <motion.div initial="hidden" animate="visible" variants={variants}>
+      <div ref={ref}>
+          <motion.div animate={animation}>
             <Link href={link} passHref>
                 <a target="_blank">
                     <div className="bg-white border rounded-lg m-5 text-center hover:rotate-2 cursor-pointer transition-transform shadow-xl hover:border-zinc-900">
@@ -27,7 +44,8 @@ export default function ProyectCard({children, src, link}) {
                     </div>
                 </a>
             </Link>
-      </motion.div>
+        </motion.div>
+      </div>
     );
         
 }

@@ -1,5 +1,6 @@
 import Navbar from "./navbar";
 import HeadTemplate from "./seo/head";
+import Footer from "./footer";
 
 export default function Layout({children, title}) {
     return (
@@ -8,6 +9,7 @@ export default function Layout({children, title}) {
             <HeadTemplate>{title}</HeadTemplate>
             <Navbar></Navbar>
             {children}
+            <Footer></Footer>
         </>
     )
 }

@@ -49,13 +49,10 @@ export default function Home() {
             </h3>
           </div>
           <div className="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 px-10 justify-center">
-            <Link href="https://www.facebook.com">
-              <a target="_blank">
-                <ProyectCard src="https://images.unsplash.com/photo-1610720657521-c38abf6dbb7d?">
+            
+                <ProyectCard link={"https://www.facebook.com"} src="https://images.unsplash.com/photo-1610720657521-c38abf6dbb7d?">
                   Photography Child
                 </ProyectCard>
-              </a>
-            </Link>
           </div>
         </div>
       </section>

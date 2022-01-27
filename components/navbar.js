@@ -7,7 +7,7 @@ const buttonMenu = () => {
 
 export default function Navbar() {
   return (
-    <nav className="">
+    <nav className="fixed top-0 w-full bg-white z-i-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex space-x-10">
@@ -22,27 +22,20 @@ export default function Navbar() {
               </a>
             </div>
 
-            <div className="hidden md:flex items-center space-x-1">
-              <Link href="/">
-                <a className="py-5 px-3 text-zinc-700 hover:text-pink-600 transition-colors">
-                  Proyectos
-                </a>
-              </Link>
-              <Link href="/">
-                <a
-                 
-                  className="py-5 px-3 text-zinc-700 hover:text-pink-600 transition-colors"
-                >
-                  Documentación
-                </a>
-              </Link>
-            </div>
+            <div className="hidden md:flex items-center space-x-1"></div>
           </div>
 
           <div className="hidden md:flex items-center space-x-1">
-            <a href="" className="py-5 px-3 text-zinc-700 hover:text-pink-600 transition-colors">
-              Github
-            </a>
+            <Link href="/">
+              <a className="py-5 px-3 text-zinc-700 hover:text-pink-600 transition-colors">
+                Proyectos
+              </a>
+            </Link>
+            <Link href="/">
+              <a className="py-5 px-3 text-zinc-700 hover:text-pink-600 transition-colors">
+                Documentacion
+              </a>
+            </Link>
             <Button href={"/"}>Contacto</Button>
           </div>
 
@@ -54,13 +47,17 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div id="mobile-menu" className="mobile-menu hidden md:hidden">
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
-          Features
-        </a>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">
-          Pricing
-        </a>
+      <div id="mobile-menu" className="mobile-menu hidden md:hidden bg-zinc-900 rounded transition ease-in-out delay-150">
+        <Link href="/">
+          <a className="block py-2 px-3 text-zinc-100 hover:text-pink-600 transition-colors">
+            Proyectos
+          </a>
+        </Link>
+        <Link href="/">
+          <a className=" block py-2 px-3 text-zinc-100 hover:text-pink-600 transition-colors">
+            Documentacion
+          </a>
+        </Link>
       </div>
     </nav>
   );

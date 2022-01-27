@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-import Button from "../components/buttons/button";
+import Button from "../components/ui/buttons/button";
 import Layout from "../components/layout";
 
 export default function Home() {

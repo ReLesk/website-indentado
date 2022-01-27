@@ -69,7 +69,7 @@ export default function Home() {
           <div className="grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 px-10 justify-center">
             <CardContact link={"https://www.github.com/relesk"} src={"/github.svg"}>Github</CardContact>
             <CardContact link={"https://www.twitter.com/fabzcode"} src={"/twitter.svg"}>Twitter</CardContact>
-            <CardContact link={"https://www.instagram.com/fabzcode"} src={"/instagram.svg"}>Github</CardContact>
+            <CardContact link={"https://www.instagram.com/fabzcode"} src={"/instagram.svg"}>Instagram</CardContact>
           </div>
         </div>
       </section>
